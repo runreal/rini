@@ -1,0 +1,25 @@
+{
+	"imports": {
+		"std/": "https://deno.land/std@0.206.0/"
+	},
+	"tasks": {
+		"test": "deno test --allow-read test/",
+		"test-watch": "deno test --watch --allow-read test/"
+	},
+	"lint": {
+		"include": ["src/", "test/"],
+		"rules": {
+			"tags": ["recommended"],
+			"exclude": ["no-explicit-any"]
+		}
+	},
+	"fmt": {
+		"include": ["src/", "test/"],
+		"useTabs": true,
+		"lineWidth": 120,
+		"indentWidth": 2,
+		"singleQuote": true,
+		"proseWrap": "preserve",
+		"semiColons": false
+	}
+}

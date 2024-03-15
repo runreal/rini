@@ -1,0 +1,50 @@
+export const snapshot = {}
+
+snapshot[`decode with duplicate properties 1`] = `
+[Object: null prototype] {
+  ar: [
+    "one",
+    "three",
+  ],
+  brr: "3",
+  str: "3",
+  zr: [
+    "deedee",
+    "123",
+  ],
+}
+`
+
+snapshot[`encode with duplicate properties 1`] = `
+ar[]=1
+ar[]=2
+ar[]=3
+br[]=1
+br[]=2
+`
+
+snapshot[`decode duplicate properties with bracketedArray=false 1`] = `
+[Object: null prototype] {
+  "ar[]": [
+    "one",
+    "three",
+  ],
+  "zr[]": "deedee",
+  brr: [
+    "1",
+    "2",
+    "3",
+    "3",
+  ],
+  str: "3",
+  zr: "123",
+}
+`
+
+snapshot[`encode duplicate properties with bracketedArray=false 1`] = `
+ar=1
+ar=2
+ar=3
+br=1
+br=2
+`
